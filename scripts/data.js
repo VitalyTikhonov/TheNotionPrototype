@@ -1,6 +1,6 @@
 "use strict";
 let articleObject = { // non-nested clauses
-  icon: 'https://repl.it/@VitalyTikhonov/TheNotionPrototype#images/icon.jpg',
+  icon: 'images/icon.jpg',
   title: 'Правки',
   items: [
     {

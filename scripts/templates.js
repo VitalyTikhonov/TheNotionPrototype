@@ -3,7 +3,7 @@ const articleMarkup = `
 		<article class="article">
 			<img class="article__icon" src="images/icon.jpg">
         <h1 contenteditable="true" class="article__headline">Введите заголовок</h1>
-        <hr>
+        <hr class="article__fold-line">
       </article>
 `;
 
@@ -13,20 +13,20 @@ const articleMarkup = `
 // `;
 
 const clauseTitleMarkup = `
-          <div class="article_clause-item">
+          <div class="article__clause-item article_clause-item_type_title">
             <nav class="menu">
               <ul class="menu__items">
                 <li class="menu__item">
-                  <button class="menu__button menu__button_new-title"><button>
+                  <button class="menu__button menu__button_new-title"></button>
                 </li>
                 <li class="menu__item">
-                  <button class="menu__button menu__button_new-paragraph"><button>
+                  <button class="menu__button menu__button_new-paragraph"></button>
                 </li>
                 <li class="menu__item">
-                  <button class="menu__button menu__button_delete-item"><button>
+                  <button class="menu__button menu__button_delete-item"></button>
                 </li>
                 <li class="menu__item">
-                  <button class="menu__button menu__button_move-item"><button>
+                  <button class="menu__button menu__button_move-item"></button>
                 </li>
               </ul>
             </nav>
@@ -35,20 +35,20 @@ const clauseTitleMarkup = `
 `;
 
 const clauseParagraphMarkup = `
-          <div class="article_clause-item">
+          <div class="article__clause-item article_clause-item_type_paragraph">
             <nav class="menu">
               <ul  class="menu__items">
                 <li class="menu__item">
-                  <button class="menu__button menu__button_new-title"><button>
+                  <button class="menu__button menu__button_new-title"></button>
                 </li>
                 <li class="menu__item">
-                  <button class="menu__button menu__button_new-paragraph"><button>
+                  <button class="menu__button menu__button_new-paragraph"></button>
                 </li>
                 <li class="menu__item">
-                  <button class="menu__button menu__button_delete-item"><button>
+                  <button class="menu__button menu__button_delete-item"></button>
                 </li>
                 <li class="menu__item">
-                  <button class="menu__button menu__button_move-item"><button>
+                  <button class="menu__button menu__button_move-item"></button>
                 </li>
               </ul>
             </nav>
