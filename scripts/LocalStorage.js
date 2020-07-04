@@ -1,6 +1,6 @@
 class LocalStorage {
     constructor() {
-      
+
     }
 
     getFromLocalStorage() { // метод А: из локалсторадж в объект
@@ -8,6 +8,7 @@ class LocalStorage {
     }
 
     setToLocalStorage() { // метод Б: из объекта в локалсторадж
+        // debugger;
         localStorage.setItem('article', JSON.stringify(this.articleObject));
     }
 }
