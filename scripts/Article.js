@@ -75,7 +75,7 @@ class Article {
         } else {
             //            если не пусто -
             //                метод А: из локалсторадж в объект
-            this.localStorageClassInst.getFromLocalStorage(this.articleObject);
+            this.articleObject = this.localStorageClassInst.getFromLocalStorage();
             // console.log('renderInitial false');
         }
         //                метод В: из объекта на страницу

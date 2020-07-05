@@ -3,9 +3,8 @@ class LocalStorage {
 
     }
 
-    getFromLocalStorage(object) { // метод А: из локалсторадж в объект
-        object = JSON.parse(localStorage.getItem('article'));
-        console.log(object);
+    getFromLocalStorage() { // метод А: из локалсторадж в объект
+        return JSON.parse(localStorage.getItem('article'));
     }
 
     setToLocalStorage(object) { // метод Б: из объекта в локалсторадж
