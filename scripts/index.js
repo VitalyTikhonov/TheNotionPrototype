@@ -9,10 +9,12 @@ function createNode(markup) {
   return element.firstElementChild;
 }
 
-function createClauseComponent(type, text, ids, articleObject) {
+function createClauseComponent({type, text, id}, articleObject) {
   const componentData = {
     selector: null,
     markup: null,
+    text,
+    id,
   }
 
   if (type === 'title') {
@@ -23,7 +25,7 @@ function createClauseComponent(type, text, ids, articleObject) {
     componentData.selector = '.article__clause-paragraph';
   }
 
-  return new ClauseComponent(componentData, text, createNode, localStorageClassInst, articleObject).create();
+  return new ClauseComponent(componentData, createNode, localStorageClassInst, articleObject).create();
 }
 
 /* ЭКЗЕМПЛЯРЫ КЛАССОВ */

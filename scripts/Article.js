@@ -49,7 +49,7 @@ class Article {
 
         // this.articleObject.items.forEach(function (item) {
         this.articleObject.items.forEach((item) => {
-            this.articleElement.appendChild(this.createClauseComponent(item.type, item.text, item.id, this.articleObject));
+            this.articleElement.appendChild(this.createClauseComponent(item, this.articleObject));
         });
 
         this.container.appendChild(this.articleElement);

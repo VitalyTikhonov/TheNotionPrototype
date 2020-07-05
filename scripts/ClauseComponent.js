@@ -1,8 +1,7 @@
 "use strict";
 class ClauseComponent {
-    constructor(componentData, text, createNode, localStorageClassInst, articleObject) {
+    constructor(componentData, createNode, localStorageClassInst, articleObject) {
         this.componentData = componentData;
-        this.text = text;
         this.createNode = createNode;
         this.localStorageClassInst = localStorageClassInst;
         this.articleObject = articleObject;
@@ -40,19 +39,16 @@ class ClauseComponent {
         this.element.addEventListener('change', this.textEditHandlerTrigger);
     }
 
-    getId() {
-        /* получить максимальное значение id из существующих */
-        // this.element.id = /* прибавить к нему 1 */
-        const wkotisthis = this.articleObject.items.map(({ id }) => id);
-        // console.log('wkotisthis', wkotisthis);
-        this.id = Math.max(...wkotisthis);
+    setId() {
+        const idsArray = this.articleObject.items.map(({ id }) => id);
+        this.id = Math.max(...idsArray) + 1;
     }
 
     create() {
         this.element = this.createNode(this.componentData.markup);
         this.textElement = this.element.querySelector(this.componentData.selector);
-        this.textElement.textContent = this.text;
-        this.getId();
+        this.textElement.textContent = this.componentData.text;
+        this.id = this.componentData.id;
         console.log(this.id, 'this.id');
         this.setEventListeners();
         return this.element;
