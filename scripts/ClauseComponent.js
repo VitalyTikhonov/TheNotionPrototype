@@ -40,17 +40,20 @@ class ClauseComponent {
         this.element.addEventListener('change', this.textEditHandlerTrigger);
     }
 
-    setId() {
+    getId() {
         /* получить максимальное значение id из существующих */
         // this.element.id = /* прибавить к нему 1 */
-        this.id = Math.max(this.articleObject.items.map(({ id }) => id));
+        const wkotisthis = this.articleObject.items.map(({ id }) => id);
+        // console.log('wkotisthis', wkotisthis);
+        this.id = Math.max(...wkotisthis);
     }
 
     create() {
         this.element = this.createNode(this.componentData.markup);
         this.textElement = this.element.querySelector(this.componentData.selector);
         this.textElement.textContent = this.text;
-        this.setId();
+        this.getId();
+        console.log(this.id, 'this.id');
         this.setEventListeners();
         return this.element;
     }
