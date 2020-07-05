@@ -9,7 +9,7 @@ function createNode(markup) {
   return element.firstElementChild;
 }
 
-function createClauseComponent(type, text) {
+function createClauseComponent(type, text, ids, articleObject) {
   const componentData = {
     selector: null,
     markup: null,
@@ -23,7 +23,7 @@ function createClauseComponent(type, text) {
     componentData.selector = '.article__clause-paragraph';
   }
 
-  return new ClauseComponent(componentData, text, createNode).create();
+  return new ClauseComponent(componentData, text, createNode, localStorageClassInst, articleObject).create();
 }
 
 /* ЭКЗЕМПЛЯРЫ КЛАССОВ */

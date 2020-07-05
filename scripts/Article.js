@@ -49,16 +49,20 @@ class Article {
 
         // this.articleObject.items.forEach(function (item) {
         this.articleObject.items.forEach((item) => {
-            this.articleElement.appendChild(this.createClauseComponent(item.type, item.text));
+            this.articleElement.appendChild(this.createClauseComponent(item.type, item.text, item.id, this.articleObject));
         });
 
         this.container.appendChild(this.articleElement);
     }
 
-    getFromPage() { // метод Г Принять от юзера: /* Это и должен быть обработчик input? */
-        //        метод Г.а: со страницы в объект
-        //        метод Б: из объекта в локалсторадж
-    }
+    // writeToArticleObject(clauseItem, text) {
+    //     clauseItem.text = text;
+    // }
+
+    // getFromPage() { // метод Г Принять от юзера: /* Это и должен быть обработчик input? */
+    //     //        метод Г.а: со страницы в объект
+    //     //        метод Б: из объекта в локалсторадж
+    // }
 
     renderInitial() { //    метод Д Отобразить начальные:
         //        проверить локалсторадж
@@ -66,12 +70,12 @@ class Article {
             //            если пусто -
             //                (ЕСЛИ ДВА ОБЪЕКТА: метод Д.а: из файла дата в объект)
             //                метод Б: из объекта в локалсторадж
-            this.localStorageClassInst.setToLocalStorage();
+            this.localStorageClassInst.setToLocalStorage(this.articleObject);
             // console.log('renderInitial true');
         } else {
             //            если не пусто -
             //                метод А: из локалсторадж в объект
-            this.localStorageClassInst.getFromLocalStorage();
+            this.localStorageClassInst.getFromLocalStorage(this.articleObject);
             // console.log('renderInitial false');
         }
         //                метод В: из объекта на страницу

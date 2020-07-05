@@ -3,12 +3,13 @@ class LocalStorage {
 
     }
 
-    getFromLocalStorage() { // метод А: из локалсторадж в объект
-        this.articleObject = JSON.parse(localStorage.getItem('article'));
+    getFromLocalStorage(object) { // метод А: из локалсторадж в объект
+        object = JSON.parse(localStorage.getItem('article'));
     }
 
-    setToLocalStorage() { // метод Б: из объекта в локалсторадж
+    setToLocalStorage(object) { // метод Б: из объекта в локалсторадж
         // debugger;
-        localStorage.setItem('article', JSON.stringify(this.articleObject));
+        console.log('setToLocalStorage', this)
+        localStorage.setItem('article', JSON.stringify(object));
     }
 }
