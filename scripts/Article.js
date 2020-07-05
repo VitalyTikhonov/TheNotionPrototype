@@ -40,14 +40,15 @@ class Article {
     render() { // метод В (RENDER): из объекта на страницу
         // методы В.а, В.б и т. д.: каскадно формируют разметку?
         this.articleElement = this.createNode(this.markup);
-        this.articleIconElement = this.articleElement.querySelector('.article__icon');
+        this.articleIconElement = this.articleElement.querySelector('.article__icon'); // избавиться от этой зависимости
         this.articleIconElement.src = this.articleObject.icon;
 
-        this.articleTitleElement = this.articleElement.querySelector('.article__headline');
+        this.articleTitleElement = this.articleElement.querySelector('.article__headline'); // избавиться от этой зависимости
         this.articleTitleElement.textContent = this.articleObject.title; // Если h
         // this.articleTitleElement.querySelector('.').value = name; // Если input
 
         // this.articleObject.items.forEach(function (item) {
+            // debugger;
         this.articleObject.items.forEach((item) => {
             this.articleElement.appendChild(this.createClauseComponent(item, this.articleObject));
         });
