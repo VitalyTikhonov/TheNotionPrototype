@@ -13,12 +13,12 @@ class ClauseComponent {
     getFromPage() { // метод Г Принять от юзера: /* Это и должен быть обработчик input? */
         //        метод Г.а: со страницы в объект
         const component = this.articleObject.items.find(item => item.id = this.id);
-        console.log(component);
+        // console.log(component);
         component.text = this.textElement.textContent;
-        console.log('getFromPage this.textElement', this.textElement);
+        // console.log('getFromPage this.textElement', this.textElement);
         //        метод Б: из объекта в локалсторадж
         this.localStorageClassInst.setToLocalStorage(this.articleObject);
-        console.log('getFromPage end');
+        // console.log('getFromPage end');
     }
 
 

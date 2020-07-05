@@ -71,15 +71,15 @@ class Article {
             //                (ЕСЛИ ДВА ОБЪЕКТА: метод Д.а: из файла дата в объект)
             //                метод Б: из объекта в локалсторадж
             this.localStorageClassInst.setToLocalStorage(this.articleObject);
-            console.log('renderInitial true');
+            // console.log('renderInitial true');
         } else {
             //            если не пусто -
             //                метод А: из локалсторадж в объект
             this.localStorageClassInst.getFromLocalStorage(this.articleObject);
-            console.log('renderInitial false');
+            // console.log('renderInitial false');
         }
         //                метод В: из объекта на страницу
-        this.render();
         console.log(this.articleObject);
+        this.render();
     }
 }
