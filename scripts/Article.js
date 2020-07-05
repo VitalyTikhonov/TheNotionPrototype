@@ -79,7 +79,7 @@ class Article {
             // console.log('renderInitial false');
         }
         //                метод В: из объекта на страницу
-        console.log(this.articleObject);
+        // console.log(this.articleObject);
         this.render();
     }
 }
