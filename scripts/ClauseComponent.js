@@ -10,7 +10,7 @@ class ClauseComponent {
     }
 
 
-    getFromPage() { // метод Г Принять от юзера: /* Это и должен быть обработчик input? */
+    getFromPage() { // метод Г Принять от юзера:
         //        метод Г.а: со страницы в объект
         const component = this.articleObject.items.find(item => item.id === this.id);
         // console.log(component);
@@ -26,10 +26,23 @@ class ClauseComponent {
         должен быть сброс таймаута?
         */
         this.getFromPage();
+        // clearTimeout(this.timer);
+        // console.log('clearTimeout', this.timer);
+        // console.log('textEditHandler');
     }
 
+    // timeoutChallenge(m) {
+    //     console.log(m);
+    // }
+
+
     // textEditHandlerTrigger() {
-    //     setTimeout(this.textEditHandler, 15000);
+        // clearTimeout(this.timer1);
+        // clearTimeout(this.timer2);
+        // console.log('setTimeout start', this.timer1);
+        // this.timer1 = setTimeout(this.textEditHandler, 5000);
+        // this.timer2 = setInterval(this.timeoutChallenge, 1000, "Hello");
+        // console.log('setTimeout end', this.timer1);
     // }
 
     setEventListeners() {
